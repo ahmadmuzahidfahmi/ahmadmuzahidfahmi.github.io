@@ -2,37 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmad Muzahid Fahmi - Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Custom Background Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="file"] {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="site-header">
-    <h1>Header</h1>
-  </header>
+  <h1>Welcome to My Page</h1>
+  <input type="file" accept="image/*" onchange="changeBackground(event)" />
 
-<section class="hero">
-  <div class="overlay-text">
-    <h2>Digital Portfolio</h2>
-    <p>etc</p>
-  </div>
-</section>
-
-<section class="main-content">
-  <h2>Welcome to My Portfolio</h2>
-  <p>This is where you can explore my projects, skills, and experiences.</p>
-
-  <!-- Add more content here -->
-  <div class="extra-content">
-    <h3>Projects</h3>
-    <p>Details about your work, achievements, and more.</p>
-    <h3>Skills</h3>
-    <p>Technical and creative proficiencies.</p>
-    <h3>Contact</h3>
-    <p>Ways to reach you or connect professionally.</p>
-  </div>
-</section>
-  
+  <script>
+    function changeBackground(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.body.style.backgroundImage = `url('${e.target.result}')`;
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
 </body>
 </html>
