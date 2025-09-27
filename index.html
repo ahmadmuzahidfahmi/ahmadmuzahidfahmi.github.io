@@ -4,34 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahmad Muzahid Fahmi - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navbar container -->
-  <div id="navbar"></div>
+  <!-- Header Section -->
+  <header class="site-header">
+    <h1>Header</h1>
+  </header>
 
-  <!-- Hero Section -->
 <section class="hero">
-  <div class="hero-content">
-    <h2>Digital Profile</h2>
-    <h1>Ahmad Muzahid Fahmi bin Ahmad Zamidi</h1>
-    <p>About me</p>
+  <div class="overlay-text">
+    <h2>Digital Portfolio</h2>
+    <p>etc</p>
   </div>
 </section>
 
 <section class="main-content">
   <h2>Welcome to My Portfolio</h2>
   <p>This is where you can explore my projects, skills, and experiences.</p>
-</section>
 
-  <!-- Script to fetch header -->
-  <script>
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-      });
-  </script>
+  <!-- Add more content here -->
+  <div class="extra-content">
+    <h3>Projects</h3>
+    <p>Details about your work, achievements, and more.</p>
+    <h3>Skills</h3>
+    <p>Technical and creative proficiencies.</p>
+    <h3>Contact</h3>
+    <p>Ways to reach you or connect professionally.</p>
+  </div>
+</section>
+  
 </body>
 </html>
