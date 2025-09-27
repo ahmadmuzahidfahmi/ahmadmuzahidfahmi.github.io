@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,15 +11,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f6f9;
       color: #333;
-      <div id="navbar"></div>
-
-<script>
-  fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-</script>
     }
 
     /* Hero Section */
@@ -71,34 +61,11 @@
       font-size: 1rem;
       color: #555;
     }
-
-    /* Navigation (Optional) */
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="skills.html">Skills</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- Navbar container -->
+  <div id="navbar"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -109,6 +76,14 @@
          My works are just a click away.</p>
     </div>
   </section>
+
+  <!-- Script to fetch header -->
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
 </body>
 </html>
-
