@@ -3,36 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Ahmad Muzahid Fahmi</title>
+  <title>Ahmad Muzahid Fahmi - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      background: url("your-photo.jpg") no-repeat center/cover; /* Replace with your image */
+      position: relative;
+    }
+
+    /* Overlay for readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #0d253f;
+    }
+
+    .hero-content h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Navigation (Optional) */
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Ahmad Muzahid Fahmi</h1>
-    <p>E-commerce & Technology Management Student</p>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am an E-commerce and Technology Management student at YPC International College 
-        with a strong interest in digital transformation and business development. 
-        I enjoy exploring how technology drives innovation, improves efficiency, 
-        and creates value for businesses. My goal is to apply my knowledge and skills 
-        to contribute to organizations while continuously learning and gaining new experiences.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Ahmad Muzahid Fahmi. Built with HTML & CSS.</p>
-  </footer>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I am Ahmad Muzahid Fahmi.</h1>
+      <h2>E-commerce & Technology Management Student</h2>
+      <p>Passionate about digital transformation and business development.<br> 
+         My works are just a click away.</p>
+    </div>
+  </section>
 </body>
 </html>
+
