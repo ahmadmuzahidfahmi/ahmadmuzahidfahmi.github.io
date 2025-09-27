@@ -14,20 +14,16 @@
     }
 
     /* Hero Section */
-<section class="hero">
-  <!-- Image behind -->
-  <img src="Media/Full body.jpg">
-
-  <!-- Text container -->
-  <div class="hero-content">
-    <h2>Digital Profile.</h2>
-    <h1>Ahmad Muzahid Fahmi bin Ahmad Zamidi</h1>
-    <p>
-      About me
-    </p>
-  </div>
-</section>
-
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      background: url("your-photo.jpg") no-repeat center/cover; /* Replace with your image */
+      position: relative;
+    }
 
     /* Overlay for readability */
     .hero::before {
@@ -74,10 +70,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Hello, I am Ahmad Muzahid Fahmi.</h1>
-      <h2>E-commerce & Technology Management Student</h2>
-      <p>Passionate about digital transformation and business development.<br> 
-         My works are just a click away.</p>
+      <h2>About me</h2>
+      <h1>Ahmad Muzahid Fahmi bin Ahmad Zamidi</h1>
     </div>
   </section>
 
